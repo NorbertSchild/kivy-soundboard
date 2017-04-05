@@ -8,11 +8,13 @@ from kivy.uix.togglebutton import ToggleButton
 class SoundBoard(Screen):
     playing = []
 
+    # Filename is pushed from the kivy file
     def plays(self, id3):
         nummer=id3
         nummer2="Sounds//"+ nummer
         Asong = SoundLoader.load(nummer2)
-
+        
+        #Could be improved by correctly grouping the togglebuttons
         if Asong.state == 'stop':
             for f in SoundBoard.playing:
                 f.stop()
@@ -26,6 +28,7 @@ class SoundBoard(Screen):
 
 
 buildKV = Builder.load_file("LayOut.kv")
+#Added the screenmanager for future imporvements and multiple screen
 sm = ScreenManager()
 sm.add_widget(SoundBoard(name='soundboard'))
 
