@@ -1,0 +1,105 @@
+#kivy 1.8.1
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+
+<SoundBoard>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgba: 0, 0, 0, 0
+            Rectangle:
+                size: root.size
+                pos: root.pos
+                #source: "gras.jpg"
+        margin: (root.width/50)
+        orientation: 'horizontal'
+        pos_hint: {'center_x':.5, 'center_y':.5}
+        Label:
+            text:'CALL OF THE GUINEA PIGS'
+            pos_hint: {'center_x':.50, 'center_y':.90}
+            color: 1,0.5,0.5,1
+            font_size: root.width*0.05
+            font_name:'Fonts//GUINEAPIGS.TTF'
+        ToggleButton:
+            id: 1
+            pos_hint: {'center_x':.24, 'center_y':.70}
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            background_normal: "Images//Cavia1.jpg"
+            background_down:'Images//Cavia1_Down.jpg'
+            on_press: root.plays('Cavia1.mp3')
+            border: (1, 1, 1, 1)
+            group: 'audio'
+        ToggleButton:
+            id: 2
+            pos_hint: {'center_x':.50, 'center_y':.70}
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            background_normal: "Images//Cavia2.jpg"
+            background_down:'Images//Cavia2_Down.jpg'
+            border: (2, 2, 2, 2)
+            on_press: root.plays('Cavia2.mp3')
+            group: 'audio'
+        ToggleButton:
+            id: 3
+            pos_hint: {'center_x':.76, 'center_y':.70}
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            background_normal: "Images//Cavia3.jpg"
+            background_down:'Images//Cavia3_Down.jpg'
+            on_press: root.plays('Cavia3.mp3')
+            group: 'audio'
+        ToggleButton:
+            id: 4
+            pos_hint: {'center_x':.24, 'center_y':.44}
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            background_normal: "Images//Cavia4.jpg"
+            background_down:'Images//Cavia4_Down.jpg'
+            on_press: root.plays('Cavia4.mp3')
+            group: 'audio'
+        ToggleButton:
+            id: 5
+            pos_hint: {'center_x':.50, 'center_y':.44}
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            background_normal: "Images//Cavia5.jpg"
+            background_down:'Images//Cavia5_Down.jpg'
+            on_press: root.plays('Cavia5.mp3')
+            group: 'audio'
+        ToggleButton:
+            id: 6
+            pos_hint: {'center_x':.76, 'center_y':.44}
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            background_normal: "Images//Cavia6.jpg"
+            background_down:'Images//Cavia6_Down.jpg'
+            on_press: root.plays('Cavia6.mp3')
+            group: 'audio'
+        ToggleButton:
+            id: 7
+            pos_hint: {'center_x':.24, 'center_y':.18}
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            background_normal: "Images//Cavia7.jpg"
+            background_down:'Images\Cavia7_Down.jpg'
+            on_press: root.plays('Cavia7.mp3')
+            group: 'audio'
+        ToggleButton:
+            id: 8
+            pos_hint: {'center_x':.50, 'center_y':.18}
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            background_normal: "Images//Cavia8.jpg"
+            background_down:'Images//Cavia8_Down.jpg'
+            on_press: root.plays('Cavia8.mp3')
+            group: 'audio'
+        ToggleButton:
+            id: 9
+            on_press: root.plays('Cavia9.mp3')
+            pos_hint: {'center_x':.76, 'center_y':.18}
+            size_hint_y: 0.25
+            size_hint_x: 0.25
+            background_normal: "Images//Cavia9.jpg"
+            background_down:'Images//Cavia9_Down.jpg'
+            group: 'audio'
